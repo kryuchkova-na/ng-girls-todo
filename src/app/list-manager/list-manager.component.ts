@@ -4,12 +4,14 @@ import {TodoItem} from '../interfaces/todo-item';
 @Component({
   selector: 'app-list-manager',
   template: `
+    <div class="todo-app">
       <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
       <ul>
           <li *ngFor="let todoItem of todoList">
               <app-todo-item [item]="todoItem"></app-todo-item>
           </li>
-      </ul>`,
+      </ul>
+    </div>`,
   styleUrls: ['./list-manager.component.css']
 })
 export class ListManagerComponent implements OnInit {
