@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoItem } from '../interfaces/todo-item';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,14 @@ import { Component } from '@angular/core';
       <app-input-button-unit></app-input-button-unit>
       <ul>
           <li *ngFor="let todoItem of todoList">
-              {{ todoItem.title }}
+            <app-todo-item [item]="todoItem"></app-todo-item>
           </li>
       </ul>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'todo-list';
-  todoList = [
+  todoList: TodoItem[] = [
     {title: 'Do this'},
     {title: 'Do that'},
     {title: 'Sleep'},
