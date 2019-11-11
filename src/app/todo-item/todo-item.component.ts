@@ -11,7 +11,7 @@ import { TodoItem } from '../interfaces/todo-item';
         <span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
             {{ item.title }}
         </span>
-        <button class="btn btn-red" (click)="removeItem()"></button>
+        <button class="btn btn-red" (click)="removeItem()">Remove</button>
     </div>
   `,
   styleUrls: ['./todo-item.component.css']
