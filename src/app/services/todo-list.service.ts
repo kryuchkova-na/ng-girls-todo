@@ -6,17 +6,18 @@ import {TodoItem} from '../interfaces/todo-item';
 })
 export class TodoListService {
   private todoList: TodoItem[] = [
-    {title: 'install NodeJS'},
-    {title: 'install Angular CLI'},
-    {title: 'create new app'},
-    {title: 'serve app'},
-    {title: 'develop app'},
-    {title: 'deploy app'},
+    {title: 'something'},
+    {title: 'something else'},
+    {title: 'drink coffee'},
   ];
 
   constructor() { }
 
   getTodoList() {
     return this.todoList;
+  }
+
+  addItem(item: TodoItem) {
+    this.todoList.push(item);
   }
 }
